@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { InvestmentResultsComponent } from './investment-results/investment-results.component';
 import { UserInputComponent } from './user-input/user-input.component';
+import { InvestmentInput } from './investment-input.model';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { UserInputComponent } from './user-input/user-input.component';
   imports: [HeaderComponent, InvestmentResultsComponent, UserInputComponent]
 })
 export class AppComponent {
-  @Input() resultData?:{
+  resultData?:{
     year: number;
     interest: number;
     valueEndOfYear: number;
@@ -19,12 +20,7 @@ export class AppComponent {
     totalAmountInvested: number;
   }[]
 
-  onCulateInvestmentResults(data: {
-    initialInvestment: number,
-    expectedReturn: number,
-    duration: number,
-    annualInvestment: number
-  }) {
+  onCulateInvestmentResults(data: InvestmentInput) {
     const {
     initialInvestment,
     expectedReturn,
