@@ -6,10 +6,7 @@ import { InvestmentInput } from './investment-input.model';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  templateUrl: './app.component.html',
-  imports: [HeaderComponent, InvestmentResultsComponent, UserInputComponent]
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-
 }
