@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard-traffic',
+  selector: 'app-traffic',
   standalone: true,
   imports: [],
-  templateUrl: './dashboard-traffic.component.html',
-  styleUrl: './dashboard-traffic.component.css'
+  templateUrl: './traffic.component.html',
+  styleUrl: './traffic.component.css'
 })
-export class DashboardTrafficComponent {
+export class TrafficComponent {
   dummyTrafficData = [
     {
       id: 'd1',
@@ -39,5 +39,4 @@ export class DashboardTrafficComponent {
     },
   ];
   maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
-
 }
